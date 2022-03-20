@@ -1,5 +1,5 @@
 from .config import GOOGLE_CLOUD_API
-from . import chatbot
+from .chatbot import Skype
 from flask import Flask, request
 
 
@@ -10,7 +10,7 @@ from flask import Flask, request
 '''
 APP_ID = "6399b9dc-d267-4646-9adc-c5784e1c667b"
 VALUE_ID ="5447Q~Q2fX1EfrG0MF9OGuNVM1-HltSw3rlGq"
-skypeBot = chatbot.Skype(client_id =APP_ID , client_secret = VALUE_ID)
+skypeBot = Skype(client_id =APP_ID , client_secret = VALUE_ID)
 # bot_id, bot_name, recipient, service, sender, text
 #THÔNG SỐ ĐỂ GỬI TIN NHẮN VÀO NHÓM
 recipient = {
@@ -20,14 +20,11 @@ recipient = {
 
 bot_id = "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype"
 
-
 bot_name = "Ping id"
 
 service = "https://smba.trafficmanager.net/apis/"
 
 sender = "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype"
-
-
 
 
 
@@ -47,11 +44,11 @@ def create_app():
         bot_name = recipient['name']
         service = data['serviceUrl']
         sender = data['conversation']['id']
-        message = data.get("text","")
+        message = data.get("text","12345")
         skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
       except:
         return "NG"
       
-    return "OK"
+    return "OK REDU"
 
   return app
