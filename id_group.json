@@ -1,10 +1,10 @@
 {
   "eventMessages": [
     {
-      "id": 1589,
+      "id": 1014,
       "type": "EventMessage",
       "resourceType": "ConversationUpdate",
-      "time": "2022-03-20T12:39:42Z",
+      "time": "2022-03-20T21:44:10Z",
       "resourceLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
       "resource": {
         "targetLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/threads/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
@@ -18,30 +18,30 @@
         },
         "id": "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
         "type": "Conversation",
-        "version": 1647779982189,
+        "version": 1647812650167,
         "properties": {
-          "consumptionhorizonpublished": "1647779981574;1647779981708;12852363034689695603",
-          "consumptionhorizon": "1647779981574;1647779981708;12852363034689695603",
+          "consumptionhorizonpublished": "1647812649476;1647812649440;8104139251592639412",
+          "consumptionhorizon": "1647812649476;1647812649440;8104139251592639412",
           "isemptyconversation": "False",
           "isfollowed": "False",
           "lastimreceivedtime": "2022-03-20T12:39:07.737Z"
         },
         "lastMessage": {
-          "id": "1647779981574",
-          "originalarrivaltime": "2022-03-20T12:39:41.451Z",
+          "id": "1647812649476",
+          "originalarrivaltime": "2022-03-20T21:44:09.075Z",
           "messagetype": "RichText",
-          "version": "1647779981574",
-          "composetime": "2022-03-20T12:39:41.451Z",
-          "clientmessageid": "12852363034689695603",
+          "version": "1647812649476",
+          "composetime": "2022-03-20T21:44:09.075Z",
+          "clientmessageid": "8104139251592639412",
           "conversationLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-          "content": "ok",
+          "content": "test",
           "type": "Message",
           "conversationid": "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
           "from": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/contacts/8:live:.cid.673f24499dc6b9d6"
         },
         "messages": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype/messages",
-        "lastUpdatedMessageId": 1647779981574,
-        "lastUpdatedMessageVersion": 1647779981574
+        "lastUpdatedMessageId": 1647812649476,
+        "lastUpdatedMessageVersion": 1647812649476
       }
     }
   ]

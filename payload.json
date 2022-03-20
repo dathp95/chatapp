@@ -1,0 +1,26 @@
+{
+  "type": "message",
+  "id": "F7GZxodb1QAICFvdZ7dADU-as|0000002",
+  "timestamp": "2022-03-20T21:33:05.1055391Z",
+  "localTimestamp": "2022-03-21T04:33:04.81+07:00",
+  "localTimezone": "Asia/Bangkok",
+  "serviceUrl": "https://webchat.botframework.com/",
+  "channelId": "webchat",
+  "from": { 
+    "id": "0003BFFD428FE8E7", 
+    "name": "You" },
+  "conversation": { 
+    "id": "F7GZxodb1QAICFvdZ7dADU-as" 
+  },
+  "recipient": { 
+    "id": "SmartLED@A2K-uGTPNf0", 
+    "name": "Ping id" 
+  },
+  "textFormat": "plain",
+  "locale": "en-US",
+  "text": "Ngu lắm",
+  "channelData": {
+    "clientActivityID": "1647811984810u2j77q6q4t",
+    "clientTimestamp": "2022-03-20T21:33:04.81Z"
+  }
+}
