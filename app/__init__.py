@@ -32,22 +32,22 @@ sender = "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype"
 
 def create_app():
   app = Flask(__name__)
-  @app.route("/api/v1/messages",methods=["GET","POST"])  
+  @app.route("/endpoint/",methods=["GET","POST"])  
   def apiMessages():
     if request.method =="POST":
       data = request.get_json()
       print('ok2')
       print(data)
-      try: 
-        recipient = data['recipient']
-        bot_id = recipient['id']
-        bot_name = recipient['name']
-        service = data['serviceUrl']
-        sender = data['conversation']['id']
-        message = data.get("text","12345")
-        skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
-      except:
-        return "NG"
+      # try: 
+      #   recipient = data['recipient']
+      #   bot_id = recipient['id']
+      #   bot_name = recipient['name']
+      #   service = data['serviceUrl']
+      #   sender = data['conversation']['id']
+      #   message = data.get("text","12345")
+      #   skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
+      # except:
+      #   return "NG"
       
     return "OK REDU"
 
