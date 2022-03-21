@@ -1,48 +1,40 @@
 {
-    "eventMessages": [
+    "text": "Ping id ngu",
+    "type": "message",
+    "timestamp": "2022-03-21T11:08:33.226Z",
+    "id": "1647860912813",
+    "channelId": "skype",
+    "serviceUrl": "https://smba.trafficmanager.net/apis/",
+    "from": {
+        "id":"29:1x6n2vv7-6-gcxssLMyQ9446y2J5M29Yp4ynsiMpxUX3zdS_iLMoTvD4Zjj5rPPr8",
+        "name": "Đạt Trần"
+    },
+    "conversation": {
+        "isGroup": true,
+        "id": "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype"
+    },
+    "recipient": {
+        "id": "28:6399b9dc-d267-4646-9adc-c5784e1c667b",
+        "name": "Ping id"
+    },
+    "entities": [
         {
-            "id": 1063,
-            "type": "EventMessage",
-            "resourceType": "ConversationUpdate",
-            "time": "2022-03-20T14:55:51Z",
-            "resourceLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-            "resource": {
-                "targetLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/threads/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-                "threadProperties": {
-                    "lastjoinat": "1647729234070",
-                    "topic": "SmartLed",
-                    "membercount": "4",
-                    "members": "[\"8:live:tranducdat.eng\",\"28:6399b9dc-d267-4646-9adc-c5784e1c667b\",\"8:live:.cid.673f24499dc6b9d6\",\"8:live:.cid.b6fb5ce6ccc54360\"]",
-                    "version": "1647772398445",
-                    "joiningenabled": "true"
-                },
-                "id": "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-                "type": "Conversation",
-                "version": 1647788151458,
-                "properties": {
-                    "consumptionhorizonpublished": "1647788151154;1647788151295;11258126761248827490",
-                    "consumptionhorizon": "1647788151154;1647788151295;11258126761248827490",
-                    "isemptyconversation": "False",
-                    "isfollowed": "False",
-                    "lastimreceivedtime": "2022-03-20T12:39:07.737Z"
-                },
-                "lastMessage": {
-                    "id": "1647788151154",
-                    "originalarrivaltime": "2022-03-20T14:55:51.049Z",
-                    "messagetype": "RichText",
-                    "version": "1647788151154",
-                    "composetime": "2022-03-20T14:55:51.049Z",
-                    "clientmessageid": "11258126761248827490",
-                    "conversationLink": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-                    "content": "123",
-                    "type": "Message",
-                    "conversationid": "19:a8ac39be95ad4d19996e13b7391db93d@thread.skype",
-                    "from": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/contacts/8:live:.cid.673f24499dc6b9d6"
-                },
-                "messages": "https://azscus1-client-s.gateway.messenger.live.com/v1/users/ME/conversations/19:a8ac39be95ad4d19996e13b7391db93d@thread.skype/messages",
-                "lastUpdatedMessageId": 1647788151154,
-                "lastUpdatedMessageVersion": 1647788151154
-            }
+            "mentioned": {
+                "id": "28:6399b9dc-d267-4646-9adc-c5784e1c667b"
+            },
+            "text": "<at id=\"28:6399b9dc-d267-4646-9adc-c5784e1c667b\">Ping id</at>",
+            "type": "mention"
+        },
+        {
+            "locale": "vi-VN",
+            "country": "KH",
+            "platform": "Windows",
+            "timezone": "Asia/Saigon",
+            "type": "clientInfo"
         }
-    ]
+    ],
+    "channelData": {
+        "text": "<at id=\"28:6399b9dc-d267-4646-9adc-c5784e1c667b\">Ping id</at> ngu"
+    },
+    "locale": "vi-VN"
 }
