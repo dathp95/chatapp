@@ -27,19 +27,20 @@ skypeBot = Skype(client_id =APP_ID , client_secret = VALUE_ID)
 KEYSHEET = "1Jiv9sJn0XWAae-3HKu4VjkKzIPIRiK_nU5UzAUJec5I"
 gg_sheet = gspread.service_account_from_dict(GOOGLE_CLOUD_API)
 spread_sheet = gg_sheet.open_by_key(KEYSHEET)
-work_sheet = spread_sheet.worksheet("200VIA")
+work_sheet = spread_sheet.worksheet("VIAOLD")
 value_sheet = work_sheet.get_all_values()
 
 
-def sending_user(user_id,username,value):
+def sending_message(user_id,username,value):
 	data_row = value.split('|')
 	via_id = data_row[0]
 	via_pass = data_row[1]
 	via_2fa = data_row[2]
-	via_date_of_birth = data_row[3]
-	via_mail = data_row[4]
-	via_pass_mail = data_row[5]
-	message = f'<at id=\"{user_id}\">{username}</at>\nVIA-ID: {via_id}\nVIA-PASS: {via_pass}\nMÃ 2FA: {via_2fa}\nNGÀY SINH:{via_date_of_birth} \nEMAIL: {via_mail}\nPASS_MAIL: {via_pass_mail}'
+	via_mail = data_row[3]
+	via_pass_mail = data_row[4]
+	via_mail_support = data_row[5]
+	via_date_of_birth = data_row[6]
+	message = f'<at id=\"{user_id}\">{username}</at>\nVIA-ID: {via_id}\nVIA-PASS: {via_pass}\nMÃ 2FA: {via_2fa}\nNGÀY SINH:{via_date_of_birth} \nEMAIL: {via_mail}\nPASS_MAIL: {via_pass_mail}\nMAIL KHÔI PHỤC: {via_mail_support}'
 	return message
 
 
@@ -52,7 +53,6 @@ def create_app():
 		if request.method =="POST":
 			data = request.get_json()    
 			try: 
-				print("Dữ liệu trả về-----",data)
 
 				#  Thông số cần thiết cho bot
 				bot_id = data["recipient"]["id"]
@@ -70,19 +70,25 @@ def create_app():
 				'''
 					list_data là 1 mảng chứa nhiều object
 					1 object: "id":[dữ liệu]
+					[{'id:[]}, {'id:[]},{'id:[]},.....]
 				'''
+				not_found = True
 
-				list_data = []
+				list_data = [] 
 				for data in value_sheet:
 					dict_data = {}
-					dict_data[data[1]]= data[0]
+					dict_data[data[2]]= data[1]
 					list_data.append(dict_data)
-				for data in list_data:
+				for data in list_data:					
 					for key, value in data.items():
 						if user_text == key:
-							message = sending_user(user_id,username,value)							
-							print(message)
+							message = sending_message(user_id,username,value)
 							skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
+							not_found = False
+													
+				if not_found:
+					skypeBot.send_message(bot_id,bot_name,recipient,service,sender,"ID không hợp lệ, vui lòng nhập UID kiểu 100053421113231")
+								
 
 						
 			except:
