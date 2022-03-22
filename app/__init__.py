@@ -42,18 +42,7 @@ def sending_user(user_id,username,value):
 	message = f'<at id=\"{user_id}\">{username}</at>\nVIA-ID: {via_id}\nVIA-PASS: {via_pass}\nMÃ 2FA: {via_2fa}\nNGÀY SINH:{via_date_of_birth} \nEMAIL: {via_mail}\nPASS_MAIL: {via_pass_mail}'
 	return message
 
-def handling_sending(
-								user_id,
-								username,
-								value,
-								bot_id,
-								bot_name,
-								recipient,
-								service,
-								sender):
-	
-	message = sending_user(user_id,username,value)
-	skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
+
 	
 
 def create_app():
@@ -82,6 +71,7 @@ def create_app():
 					list_data là 1 mảng chứa nhiều object
 					1 object: "id":[dữ liệu]
 				'''
+
 				list_data = []
 				for data in value_sheet:
 					dict_data = {}
@@ -92,13 +82,8 @@ def create_app():
 						if user_text == key:
 							message = sending_user(user_id,username,value)							
 							print(message)
-							# bot_id,bot_name,recipient,service,sender,message
-							skypeBot.send_message(bot_id = bot_id,
-																		bot_name =bot_name,
-																		recipient=recipient,
-																		service= service,
-																		sender=sender,
-																		message=message)
+							skypeBot.send_message(bot_id,bot_name,recipient,service,sender,message)
+
 						
 			except:
 				return "NG"
